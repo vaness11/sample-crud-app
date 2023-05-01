@@ -2,7 +2,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
@@ -12,7 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { useState, ReactNode } from 'react';
-import { mainListItems } from './menu';
+import { Menu } from './menu';
 import { AppBar } from './app-bar';
 import { Drawer } from './drawer';
 
@@ -70,7 +69,7 @@ export const Layout = (props: { children: ReactNode }) => {
             </IconButton>
           </Toolbar>
           <Divider />
-          <List component='nav'>{mainListItems}</List>
+          <Menu/>
         </Drawer>
         <Box
           component='main'
